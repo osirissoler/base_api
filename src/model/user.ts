@@ -11,7 +11,6 @@ export interface IUser extends mongoose.Document {
   isDeleted: boolean;
   created_at: string;
   updated_at: string;
-  rol: Types.ObjectId;
   location: string;
   isGoogle: boolean;
   isFacebook: boolean;
@@ -56,12 +55,7 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  rol: {
-    type: Schema.Types.ObjectId,
-    ref: "Roles",
-    require: true,
-    default: "6557fee3e84e6f80776675f0",
-  },
+ 
 
   location: {
     type: String,
