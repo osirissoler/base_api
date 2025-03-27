@@ -6,7 +6,6 @@ import { generarJWT } from "../helper/create-jwt";
 const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
-    console.log(email, password)
     const user = await User.findOne({ email })
 
     if (!user) {
